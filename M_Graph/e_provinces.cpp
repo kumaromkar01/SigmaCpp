@@ -1,4 +1,4 @@
-//gfg
+//gfg number of connected components and number of islands
 
 void dfs(vector<int> arr[],vector<int>&vis,int node){
         vis[node]=1;
@@ -32,3 +32,5 @@ void dfs(vector<int> arr[],vector<int>&vis,int node){
         }
         return cnt;
     }
+
+//
