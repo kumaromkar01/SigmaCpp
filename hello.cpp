@@ -16,24 +16,7 @@ using min_heap = priority_queue<T,vector<T>,greater<T>>;
 
 
 void solve(){
-    int n,k;
-    cin>>n>>k;
-    int arr[n];
-    for(int i=0;i<n;i++) cin>>arr[i];
-
-    int i=0,j=n-1;
-
-    for(int x=0;x<k && i<=j;x++){
-        if(x%2==0){
-            arr[i]--;
-            if(arr[i]==0) i++;
-        }
-        else{
-            arr[j]--;
-            if(arr[j]==0) j--;
-        }
-    }
-    cout<<(n-1)-j + i<<endl;
+    
 
 }
 
@@ -44,7 +27,26 @@ int main()
     cin >> t;
     while (t--)
     {
-        solve();        
+        // solve(); 
+        int matrix[5][5];
+    for(int i=0;i<5;i++){
+        for(int j=0;j<5;j++){
+            cin>>matrix[i][j];
+        }
+    }    
+
+    int row,col;
+    for(int i=0;i<5;i++){
+        for(int j=0;j<5;j++){
+            if(matrix[i][j]==1) {
+                row = i;
+                col = j;
+            }
+        }
+    }
+
+    int ans = row+col-4;
+    cout<<ans<<endl;       
     }
     return 0;
 }
