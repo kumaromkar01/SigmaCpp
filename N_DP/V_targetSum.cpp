@@ -8,8 +8,8 @@ public:
             else if(abs(target)==abs(nums[0]) ) return 1;
             else return 0;
         }
-        int plus = nums[ind]+solve(ind-1,nums,target-nums[ind]);
-        int minus = -nums[ind]+solve(ind-1,nums,target+nums[ind]);
+        int plus = solve(ind-1,nums,target-nums[ind]);
+        int minus = solve(ind-1,nums,target+nums[ind]);
         return plus + minus;
     }
     int findTargetSumWays(vector<int>& nums, int target) {
